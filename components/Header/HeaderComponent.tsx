@@ -6,6 +6,8 @@ import "tailwindcss-elevation";
 import React from "react";
 //import Image from "next/image";
 import Link from "next/link";
+import Image from "next/image";
+import MarsereumLogo from 'assets/images/Marsereum-Logo.png'
 import { ConnectWallet } from "../Web3Modal/WalletConnect";
 import { Dropdown } from "flowbite-react";
 export default function HeaderComponent() {
@@ -41,10 +43,17 @@ export default function HeaderComponent() {
             id="navbar-sticky"
           >
             <ul className="invisible md:visible h-auto flex flex-row justify-left text-left items-left p-4 mt-4 bg-black rounded-lg border border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-black dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+              <Image
+                          alt="Your Company"
+                          className="h-20 w-auto sm:h-10"
+                          src={MarsereumLogo}
+                          height={30}
+                          width={180}
+                        />
               <li>
                 <a href="https://www.welcomebacktrump.net/">
                   <p
-                    className="cursor-pointer block py-2 pr-4 pl-3 text-white rounded md:bg-transparent md:text-white md:p-0 dark:text-white"
+                    className="cursor-pointer block py-2 pr-4 ml-12 text-white rounded md:bg-transparent md:text-white md:p-0 dark:text-white"
                   >
                     Website{" "}
                   </p>

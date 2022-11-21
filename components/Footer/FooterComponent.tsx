@@ -64,7 +64,7 @@ export default function FooterComponent() {
               <ul className="text-gray-600 dark:text-gray-400">
                 <li className="mb-4">
                   <a href="/" className="hover:underline">
-                    WelcomeBackTrump
+                    Marsereum
                   </a>
                 </li>
                 <li>
@@ -111,7 +111,7 @@ export default function FooterComponent() {
           <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
             © 2022{" "}
             <a href="/" className="hover:underline">
-              WelcomeBackTrump
+              Marsereum
             </a>
             . All Rights Reserved.
           </span>
@@ -135,7 +135,7 @@ export default function FooterComponent() {
               <span className="sr-only"></span>
             </a>
             <a
-              href="https://twitter.com/Trump_welcome1"
+              href="https://twitter.com/marsereum"
               className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
             >
               <svg

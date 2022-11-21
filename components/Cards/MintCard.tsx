@@ -142,7 +142,7 @@ export default function MintCardComponent() {
         style={{ fontFamily: "Cinzel, serif" }}
         className="text-center mt-12 text-2xl sm:text-3xl mb:mb-2 text-4xl font-bold tracking-tight text-gray-100 dark:text-white"
       >
-        Welcome Back Trump Collection
+        Your voice has a say <br /> start by casting your votes <br/> making new proposals <br /> and engaging in the community
       </h5>
       <button
         onClick={() => handleMint()}

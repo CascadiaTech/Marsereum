@@ -27,6 +27,10 @@
   align-items: center;
 }
 
+.Orbitron-font{
+  font-family: 'Orbitron, sans-serif';
+}
+
 .footer {
   display: flex;
   flex: 1;
