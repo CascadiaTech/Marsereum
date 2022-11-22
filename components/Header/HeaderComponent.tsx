@@ -21,8 +21,8 @@ export default function HeaderComponent() {
           <div className="md:order-2">
             <ConnectWallet></ConnectWallet>
           </div>
-          <div className="sm:visible md:hidden">
-            <Dropdown label="Navigation">
+          <div className="bg-gradient-to-r from-red-700 to-red-900 hover:from-red-500 hover:to-red-700 rounded-lg sm:visible md:hidden">
+            <Dropdown color={'rgb(0.30,0.65,1.00)'} label="Navigation">
               <Dropdown.Header>
                 <span className="block text-sm">Navigation</span>
               </Dropdown.Header>
