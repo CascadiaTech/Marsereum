@@ -10,7 +10,7 @@ import ScrollpositionAnimation from "../hooks/OnScroll";
 import { useEffect, useState } from "react";
 import "@uniswap/widgets/fonts.css";
 import { useWeb3React } from "@web3-react/core";
-import '../css/main.css'
+import '../main.css'
 import Marsereum from 'assets/images/Marsereum.png'
 
 import { SwapWidget,darkTheme, lightTheme, Theme } from "@uniswap/widgets";
