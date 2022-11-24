@@ -58,7 +58,7 @@ export const ConnectWallet = () => {
 
   useEffect(() => {
     console.log(chainId, account, active);
-  });
+  },[]);
 
   const OnClick = () => {
     setVisible(true);

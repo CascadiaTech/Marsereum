@@ -23,23 +23,19 @@ const Home: NextPage = () => {
   const [uniswaprovider, setuniswapprivder] = useState();
   const Runeaddress = '0xc68a4c68f17fed266a5e39e7140650acadfe78f8'
 
-  const jsonRpcUrlMap = {
-    1: ["https://mainnet.infura.io/v3/7724cb4383a249dfb4a847c90954b901"],
-    3: ["https://ropsten.infura.io/v3/<YOUR_INFURA_PROJECT_ID>"],
-  };
 
   useEffect(() => {
 
-    async function setProvider() {
-      if (account) {
-        const provider = new Web3Provider(
-          library?.provider as ExternalProvider | JsonRpcFetchFunc
-        );
-        return provider;
-      } else {
-        return;
+      async function setProvider() {
+        if (account) {
+          const provider = new Web3Provider(
+            library?.provider as ExternalProvider | JsonRpcFetchFunc
+          );
+          return provider;
+        } else {
+          return;
+        }
       }
-    }
 
     async function ScrollpositionAnimation() {
       const targets = document.querySelectorAll(".js-show-on-scroll");
@@ -66,7 +62,12 @@ const Home: NextPage = () => {
       ScrollpositionAnimation();
     }
     setProvider().then((result) => setuniswapprivder(result as any));
-  });
+  },[account]);
+
+  const jsonRpcUrlMap = {
+    1: ["https://mainnet.infura.io/v3/fc5d70bd4f49467289b3babe3d8edd97"],
+    3: ["https://ropsten.infura.io/v3/<YOUR_INFURA_PROJECT_ID>"],
+  };
 
   return (
 
@@ -129,7 +130,7 @@ const Home: NextPage = () => {
             <button
               onClick={() =>
                 window.open(
-                  "https://app.uniswap.org/#/swap?outputCurrency=0xa01710ca98e4d66fd8d2044b3437c024e7a64d76"
+                  "https://www.tally.xyz/gov/eip155:5:0x430786107C4Db7b87e399b75Bd9eA0740643037B/proposal/create?utm_source=daopage&utm_medium=Marsereum%20governor2"
                 )
               }
               style={{ fontFamily: 'Orbitron, sans-serif'}}
@@ -148,6 +149,8 @@ const Home: NextPage = () => {
           <div
           className={'flex flex-col mx-auto justify-center self-center px-6 text-center mt-10 mb-10 md:mt-0 md:mb-0'}>
           <div className="">
+
+
            {uniswaprovider ? (
           <>
            <div className={'w-100% h-120%'}>
@@ -180,6 +183,7 @@ const Home: NextPage = () => {
           </div>
         </>
         )}
+
          </div>
     </div>
 
