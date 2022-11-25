@@ -149,7 +149,7 @@ export default function FooterComponent() {
               <span className="sr-only">Twitter page</span>
             </a>
             <a
-              href="https://github.com/CascadiaTech/WelcomeBackTrump"
+              href="https://github.com/CascadiaTech/Marsereum"
               className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
             >
               <svg
