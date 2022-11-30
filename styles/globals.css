@@ -42,6 +42,13 @@ a {
 
 }
 
+.Marsereum-buttons {
+  background: linear-gradient(135deg, #470000 0%, #2B0000 50%, #140000 100%);
+}
+.Marsereum-buttons:hover{
+  background: linear-gradient(135deg, #7c0101 0%, #510101 50%, #3b0101 100%);
+}
+
 .CreateAccount-Card{
 background-color: rgba(34, 34, 34, 0.904);
 border: 2px;

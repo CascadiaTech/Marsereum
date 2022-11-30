@@ -93,7 +93,7 @@ const Home: NextPage = () => {
           <p className={'my-12'}></p>
 
         <div className={'flex flex-col self-center'}>
-          <div style={{ background: 'linear-gradient(135deg, #E10000 0%, #920000 0%, #000000 100%)'}} 
+          <div style={{ background: 'linear-gradient(135deg, #470000 0%, #2B0000 50%, #140000 100%)',}} 
             className={'border rounded-xl justify-center text-center w-fit h-fit py-20 px-6 mx-10 sm:px-10 md:w-auto md:px-10'}>
             <h5 style={{ fontFamily: 'Inter-Medium-500', color: '#616d7e'}}
             className="text-center text-2xl sm:text-2xl md:text-3xl tracking-tight dark:text-white">
@@ -106,9 +106,9 @@ const Home: NextPage = () => {
           >
             <button
               onClick={() => window.open("https://www.tally.xyz/gov/eip155:5:0x430786107C4Db7b87e399b75Bd9eA0740643037B")}
-              style={{ fontFamily: 'Orbitron, sans-serif'}}
+              style={{ fontFamily: 'Inter-Medium-500'}}
               type="button"
-              className="RedCard text-gray-100 hover:from-red-700 hover:to-red-900 focus:ring-4
+              className="text-white bg-gradient-to-r from-red-900 to-red-800 hover:from-red-700 hover:to-red-800 focus:ring-4
               focus:outline-none focus:ring-gray-300 rounded-lg text-xl px-3 py-3 text-center mr-2 mb-2 w-28 md:w-52 lg:w-64"
             >
               Open DAO
@@ -119,9 +119,9 @@ const Home: NextPage = () => {
                   "https://opensea.io/collection/officialwelcomebacktrump"
                 )
               }
-              style={{ background: 'linear-gradient(135deg, #470000 0%, #2B0000 50%, #140000 100%)', fontFamily: 'Orbitron, sans-serif'}}
+              style={{ fontFamily: 'Inter-Medium-500'}}
               type="button"
-              className="text-gray-100 hover:from-red-700 hover:to-red-900 focus:ring-4
+              className="text-white bg-gradient-to-r from-red-900 to-red-800 hover:from-red-700 hover:to-red-800 focus:ring-4
               focus:outline-none focus:ring-gray-300 rounded-lg text-xl px-3 py-3 text-center mr-2 mb-2 w-28 md:w-52 lg:w-64"
             >
               {" "}
@@ -133,9 +133,9 @@ const Home: NextPage = () => {
                   "https://www.tally.xyz/gov/eip155:5:0x430786107C4Db7b87e399b75Bd9eA0740643037B/proposal/create?utm_source=daopage&utm_medium=Marsereum%20governor2"
                 )
               }
-              style={{ background: 'linear-gradient(135deg, #470000 0%, #2B0000 50%, #140000 100%)', fontFamily: 'Orbitron, sans-serif'}}
+              style={{ fontFamily: 'Inter-Medium-500'}}
               type="button"
-              className="text-gray-100 hover:from-red-700 hover:to-red-900 focus:ring-4 
+              className="text-white bg-gradient-to-r from-red-900 to-red-800 hover:from-red-700 hover:to-red-800 focus:ring-4 
               focus:outline-none focus:ring-gray-300 rounded-xl text-xl px-3 py-3 text-center mr-2 mb-2 w-28 md:w-52 lg:w-64"
             >
               Write a Proposal
