@@ -84,7 +84,7 @@ export default function FooterComponent() {
               <ul className="text-gray-600 dark:text-gray-400">
                 <li className="mb-4">
                   <a
-                    href="https://t.me/WelcomeBackTrump_Token"
+                    href=""
                     className="hover:underline "
                   >
                     Telegram
@@ -92,7 +92,7 @@ export default function FooterComponent() {
                 </li>
                 <li>
                   <a
-                    href="https://app.uniswap.org/#/swap?outputCurrency=0xa01710ca98e4d66fd8d2044b3437c024e7a64d76"
+                    href="https://app.uniswap.org/#/swap?outputCurrency=0xe0df31d06d72b2f5231489af0edc422b372f49f1"
                     className="hover:underline"
                   >
                     Uniswap

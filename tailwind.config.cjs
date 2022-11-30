@@ -41,6 +41,9 @@ module.exports = {
       spacing: {
         '100': '50vw',
       },
+      background: {
+        'RedCard' : 'linear-gradient(135deg, #470000 0%, #2B0000 50%, #140000 100%)',
+      },
       fontFamily: {
         'serif': ['Cinzel', 'serif'],
 
