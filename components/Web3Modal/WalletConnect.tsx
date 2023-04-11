@@ -58,7 +58,7 @@ export const ConnectWallet = () => {
 
   useEffect(() => {
     console.log(chainId, account, active);
-  });
+  },[]);
 
   const OnClick = () => {
     setVisible(true);
@@ -75,7 +75,7 @@ export const ConnectWallet = () => {
         <button
           type="button"
           onClick={onActiveClick}
-          className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+          className="text-white bg-gradient-to-r from-red-700 to-red-900 hover:from-red-500 hover:to-red-700 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
         >
           Disconnect Wallet
         </button>
@@ -84,7 +84,7 @@ export const ConnectWallet = () => {
           <button
             type="button"
             onClick={OnClick}
-            className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium mt-2 rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+            className="text-white bg-gradient-to-r from-red-800 to-red-900 hover:from-red-500 hover:to-red-700 focus:ring-4 focus:ring-blue-300 font-medium mt-2 rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
           >
             Connect Wallet
           </button>

@@ -9,7 +9,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif, Orbitron;
 }
 
 a {
@@ -40,6 +40,13 @@ a {
   flex-direction: column;
   text-align: center;
 
+}
+
+.Marsereum-buttons {
+  background: linear-gradient(135deg, #470000 0%, #2B0000 50%, #140000 100%);
+}
+.Marsereum-buttons:hover{
+  background: linear-gradient(135deg, #7c0101 0%, #510101 50%, #3b0101 100%);
 }
 
 .CreateAccount-Card{
