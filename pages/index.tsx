@@ -19,6 +19,7 @@ import {
   JsonRpcFetchFunc,
   Web3Provider,
 } from "@ethersproject/providers";
+import ClaimComponent from "../components/Claim/ClaimComponent";
 const Home: NextPage = () => {
   const { account, chainId, active } = useWeb3React();
   const showConnectAWallet = Boolean(!account);
@@ -72,14 +73,20 @@ const Home: NextPage = () => {
   };
 
   return (
-    <div className="">
+    <>
       <main className={styles.main}>
+        <div
+          style={{
+            background:
+              "radial-gradient(ellipse at center, #540404 0%, #000000 63%, #000000 100%)",
+          }}
+          className={"z-0 absolute min-w-full h-full -translate-y-full"}
+        ></div>
         <header>
           {" "}
           <HeaderComponent></HeaderComponent>
         </header>
-
-        <div className={""}>
+        <div className={"z-10 relative"}>
           <p
             style={{ fontFamily: "space-age" }}
             className="mt-12 text-3xl sm:text-4xl text-center text-gray-100 md:text-4xl lg:text-5xl"
@@ -92,15 +99,15 @@ const Home: NextPage = () => {
             <div
               style={{
                 background:
-                  "linear-gradient(135deg, #470000 0%, #2B0000 50%, #140000 100%)",
+                  "linear-gradient(135deg, #3F1B1B 0%, #3F1B1B 50%, #100909 100%)",
               }}
               className={
-                "border rounded-xl justify-center text-center w-fit h-fit py-20 px-6 mx-10 sm:px-10 md:w-auto md:px-10"
+                "rounded-xl justify-center text-center w-fit h-fit py-20 px-6 mx-10 sm:px-10 md:w-auto md:px-10"
               }
             >
               <h5
-                style={{ fontFamily: "Inter-Medium-500", color: "#616d7e" }}
-                className="text-center text-2xl sm:text-2xl md:text-3xl tracking-tight dark:text-white"
+                style={{ fontFamily: "Inter-Regular-400", color: "#616d7e" }}
+                className="text-center text-2xl dark:text-white"
               >
                 Your voice has a say <br /> Start by casting your votes <br />{" "}
                 Making new proposals <br /> and engaging in the community
@@ -115,22 +122,27 @@ const Home: NextPage = () => {
                     "https://www.tally.xyz/gov/eip155:5:0x430786107C4Db7b87e399b75Bd9eA0740643037B"
                   )
                 }
-                style={{ fontFamily: "Inter-Medium-500" }}
-                type="button"
-                className="duration-300 text-md hover:cursor-pointer text-white bg-gradient-to-r from-red-800 to-red-900 hover:from-red-500 hover:to-red-700 focus:ring-4 focus:ring-blue-300 mt-2 rounded-lg px-10 py-4 mr-2 mb-2"
+                style={{
+                  background:
+                    "linear-gradient(135deg, #3F1B1B 0%, #3F1B1B 50%, #100909 100%)",
+                  fontFamily: "Inter-Regular-400",
+                }}
+                className="duration-300 mx-4 font-light hover:cursor-pointer bg-gradient-to-r from-red-800 to-red-900 hover:from-red-500 hover:to-red-700 focus:ring-4 focus:ring-blue-300 mt-2 rounded-xl px-6 py-2 md:px-10 md:py-4 mr-2 mb-2"
               >
                 Open DAO
               </button>
-
               <button
                 onClick={() =>
                   window.open(
                     "https://opensea.io/collection/officialwelcomebacktrump"
                   )
                 }
-                style={{ fontFamily: "Inter-Medium-500" }}
-                type="button"
-                className="duration-300 text-md hover:cursor-pointer text-white bg-gradient-to-r from-red-800 to-red-900 hover:from-red-500 hover:to-red-700 focus:ring-4 focus:ring-blue-300 mt-2 rounded-lg px-10 py-4 mr-2 mb-2"
+                style={{
+                  background:
+                    "linear-gradient(135deg, #3F1B1B 0%, #3F1B1B 50%, #100909 100%)",
+                  fontFamily: "Inter-Regular-400",
+                }}
+                className="duration-300 mx-4 font-light hover:cursor-pointer bg-gradient-to-r from-red-800 to-red-900 hover:from-red-500 hover:to-red-700 focus:ring-4 focus:ring-blue-300 mt-2 rounded-xl px-6 py-2 md:px-10 md:py-4 mr-2 mb-2"
               >
                 {" "}
                 Vote
@@ -142,9 +154,12 @@ const Home: NextPage = () => {
                     "https://www.tally.xyz/gov/eip155:5:0x430786107C4Db7b87e399b75Bd9eA0740643037B/proposal/create?utm_source=daopage&utm_medium=Marsereum%20governor2"
                   )
                 }
-                style={{ fontFamily: "Inter-Medium-500" }}
-                type="button"
-                className="duration-300 text-md hover:cursor-pointer text-white bg-gradient-to-r from-red-800 to-red-900 hover:from-red-500 hover:to-red-700 focus:ring-4 focus:ring-blue-300 mt-2 rounded-lg px-10 py-4 mr-2 mb-2"
+                style={{
+                  background:
+                    "linear-gradient(135deg, #3F1B1B 0%, #3F1B1B 50%, #100909 100%)",
+                  fontFamily: "Inter-Regular-400",
+                }}
+                className="duration-300 mx-4 font-light hover:cursor-pointer bg-gradient-to-r from-red-800 to-red-900 hover:from-red-500 hover:to-red-700 focus:ring-4 focus:ring-blue-300 mt-2 rounded-xl px-6 py-2 md:px-10 md:py-4 mr-2 mb-2"
               >
                 Proposals
               </button>
@@ -169,13 +184,12 @@ const Home: NextPage = () => {
                     >
                       <h5
                         style={{
-                          fontFamily: "Inter-Medium-500",
+                          fontFamily: "Inter-Regular-400",
                           color: "#616d7e",
                         }}
                         className="text-center my-6 text-2xl sm:text-2xl md:text-3xl mx-6 dark:text-white"
                       >
-                        Purchase Marsereum here to become a member <br /> start
-                        propsing and voting on certain matters within <br />
+                        Purchase Marsereum here to become a member within <br />
                         The Marsereum Decentralized Autonomous Organization
                       </h5>
                       <div className="Uniswap mx-auto px-6 sm:px-6 md:px-12 lg:px-24">
@@ -196,16 +210,16 @@ const Home: NextPage = () => {
                     <div
                       style={{
                         background:
-                          "linear-gradient(135deg, #470000 0%, #2B0000 50%, #140000 100%)",
+                          "linear-gradient(135deg, #3F1B1B 0%, #3F1B1B 50%, #100909 100%)",
                       }}
                       className={
-                        "border rounded-xl justify-center text-center w-1/2 h-fit py-10 px-6 mx-10 sm:px-10 md:px-10"
+                        "rounded-xl justify-center text-center w-1/2 h-fit py-10 px-6 mx-10 sm:px-10 md:px-10"
                       }
                     >
                       <p
                         className="text-center text-2xl sm:text-2xl md:text-3xl"
                         style={{
-                          fontFamily: "Inter-Medium-500",
+                          fontFamily: "Inter-Regular-400",
                           color: "#616d7e",
                         }}
                       >
@@ -218,9 +232,10 @@ const Home: NextPage = () => {
             </div>
           </div>
         </div>
+        <ClaimComponent></ClaimComponent>
       </main>
       <FooterComponent></FooterComponent>
-    </div>
+    </>
   );
 };
 

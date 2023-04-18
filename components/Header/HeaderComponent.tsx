@@ -15,10 +15,10 @@ export default function HeaderComponent() {
 
   return (
     <div>
-      <nav className="bg-black px-2 sm:px-4 py-2.5 dark:bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
+      <nav className="bg-transparent px-2 sm:px-4 py-2.5 fixed w-full z-20 top-0 left-0">
         <div className="container flex flex-nowrap justify-left items-center mx-auto">
-          <div></div>
-          <div className="md:order-2">
+          <div className="md:order-2 visible md:invisible">
+          <ConnectWallet></ConnectWallet>
           </div>
           <div className="bg-gradient-to-r from-red-700 to-red-900 hover:from-red-500 hover:to-red-700 rounded-lg sm:visible md:hidden">
             <Dropdown color={"rgb(0.30,0.65,1.00)"} label="Navigation">
@@ -36,7 +36,7 @@ export default function HeaderComponent() {
             </Dropdown>
           </div>
           <div className="" id="navbar-sticky">
-            <ul className="invisible md:visible flex flex-row text-xl mx-10 mt-5 justify-center bg-black rounded-lg">
+            <ul className="invisible md:visible flex flex-row text-xl mx-10 mt-5 justify-center rounded-lg">
               <li
                 className={"flex flex-col text-left object-left justify-left"}
               >
@@ -49,22 +49,26 @@ export default function HeaderComponent() {
                   ></Image>
                 </p>
               </li>
-              <p className={"mx-48"}></p>
-              <div className={"flex flex-col"}>
+              <p className={"md:mx-12 lg:mx-36 xl:mx-44"}></p>
+              <div className={"flex flex-col justify-center mx-auto"}>
+                <div className={'flex flex-row'}>
                 <li
-                  style={{ fontFamily: "Expletus" }}
-                  className="duration-300 mx-auto text-md hover:cursor-pointer text-white bg-gradient-to-r from-red-800 to-red-900 hover:from-red-500 hover:to-red-700 focus:ring-4 focus:ring-blue-300 mt-2 rounded-lg px-10 py-4 mr-2 mb-2"
+                  
+                style={{
+                  background:
+                  "linear-gradient(135deg, #3F1B1B 0%, #3F1B1B 50%, #100909 100%)", fontFamily: "Inter-Regular-400",
+                }}
+                  className="duration-300 w-60 text-center text-md hover:cursor-pointer text-white hover:from-red-500 hover:to-red-700 focus:ring-4 focus:ring-blue-300 mt-2 rounded-lg px-8 py-3 mr-2 mb-2"
                 >
                   <a
                     href="https://odasea.com"
                   >
                   Website</a>
                 </li>
-                </div>
-                <div className={'flex flex-col'}>
                 <li>
             <ConnectWallet></ConnectWallet>
                 </li>
+                </div>
               </div>
             </ul>
           </div>

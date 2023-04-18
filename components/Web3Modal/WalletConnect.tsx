@@ -75,8 +75,12 @@ export const ConnectWallet = () => {
         <button
           type="button"
           onClick={onActiveClick}
-          className="text-white bg-gradient-to-r from-red-700 to-red-900 hover:from-red-500 hover:to-red-700 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
-        >
+          style={{
+            background:
+            "linear-gradient(135deg, #3F1B1B 0%, #3F1B1B 50%, #100909 100%)", fontFamily: "Inter-Regular-400",
+          }}
+            className="duration-300 w-60 text-center text-md hover:cursor-pointer text-white hover:from-red-500 hover:to-red-700 focus:ring-4 focus:ring-blue-300 mt-2 rounded-lg px-8 py-3 mr-2 mb-2"
+          >
           Disconnect Wallet
         </button>
       ) : (
@@ -84,8 +88,12 @@ export const ConnectWallet = () => {
           <button
             type="button"
             onClick={OnClick}
-            className="duration-300 mx-auto text-md hover:cursor-pointer text-white bg-gradient-to-r from-red-800 to-red-900 hover:from-red-500 hover:to-red-700 focus:ring-4 focus:ring-blue-300 mt-2 rounded-lg px-10 py-4 mr-2 mb-2"          >
-            Connect Wallet
+            style={{
+              background:
+              "linear-gradient(135deg, #3F1B1B 0%, #3F1B1B 50%, #100909 100%)", fontFamily: "Inter-Regular-400",
+            }}
+              className="duration-300 w-60 text-center text-md hover:cursor-pointer text-white hover:from-red-500 hover:to-red-700 focus:ring-4 focus:ring-blue-300 mt-2 rounded-lg px-8 py-3 mr-2 mb-2"
+            > Connect Wallet
           </button>
           <Modal show={visible} size="md" popup={true} onClose={OnOffClick}>
             <Modal.Header />
