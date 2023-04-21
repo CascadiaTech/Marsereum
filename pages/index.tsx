@@ -134,7 +134,7 @@ const Home: NextPage = () => {
               <button
                 onClick={() =>
                   window.open(
-                    "https://opensea.io/collection/officialwelcomebacktrump"
+                    "https://www.tally.xyz/gov/marsereum-governor2-1463"
                   )
                 }
                 style={{
