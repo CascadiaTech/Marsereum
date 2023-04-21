@@ -69,10 +69,10 @@ export default function FooterComponent() {
                 </li>
                 <li>
                   <a
-                    href="/"
+                    href="https://www.marsereum.org/organizations"
                     className="hover:underline"
                   >
-                    Documents
+                    Organizations
                   </a>
                 </li>
               </ul>
@@ -82,7 +82,7 @@ export default function FooterComponent() {
                 Follow us
               </h2>
               <ul className="text-gray-600 dark:text-gray-400">
-                <li className="mb-4">
+                <li className="mb-2">
                   <a
                     href=""
                     className="hover:underline "
@@ -90,12 +90,28 @@ export default function FooterComponent() {
                     Telegram
                   </a>
                 </li>
-                <li>
+                <li className="mb-2">
                   <a
                     href="https://app.uniswap.org/#/swap?outputCurrency=0x4D4206Dab4533213109DF79D218Ed9b63c50f9Bb"
                     className="hover:underline"
                   >
                     Uniswap
+                  </a>
+                </li>
+                <li className="mb-2">
+                  <a
+                    href="https://discord.com/invite/Q7gwCjVMzk"
+                    className="hover:underline"
+                  >
+                    Discord
+                  </a>
+                </li>
+                <li className="mb-2">
+                  <a
+                    href="https://www.reddit.com/r/marsereum/"
+                    className="hover:underline"
+                  >
+                    Reddit
                   </a>
                 </li>
               </ul>
