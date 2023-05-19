@@ -69,10 +69,10 @@ export default function FooterComponent() {
                 </li>
                 <li>
                   <a
-                    href="/"
+                    href="https://www.marsereum.org/organizations"
                     className="hover:underline"
                   >
-                    Documents
+                    Organizations
                   </a>
                 </li>
               </ul>
@@ -82,7 +82,7 @@ export default function FooterComponent() {
                 Follow us
               </h2>
               <ul className="text-gray-600 dark:text-gray-400">
-                <li className="mb-4">
+                <li className="mb-2">
                   <a
                     href=""
                     className="hover:underline "
@@ -90,12 +90,28 @@ export default function FooterComponent() {
                     Telegram
                   </a>
                 </li>
-                <li>
+                <li className="mb-2">
                   <a
-                    href="https://app.uniswap.org/#/swap?outputCurrency=0xe0df31d06d72b2f5231489af0edc422b372f49f1"
+                    href="https://app.uniswap.org/#/swap?outputCurrency=0x4D4206Dab4533213109DF79D218Ed9b63c50f9Bb"
                     className="hover:underline"
                   >
                     Uniswap
+                  </a>
+                </li>
+                <li className="mb-2">
+                  <a
+                    href="https://discord.com/invite/Q7gwCjVMzk"
+                    className="hover:underline"
+                  >
+                    Discord
+                  </a>
+                </li>
+                <li className="mb-2">
+                  <a
+                    href="https://www.reddit.com/r/marsereum/"
+                    className="hover:underline"
+                  >
+                    Reddit
                   </a>
                 </li>
               </ul>
@@ -116,24 +132,6 @@ export default function FooterComponent() {
             . All Rights Reserved.
           </span>
           <div className="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
-            <a
-              href=""
-              className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
-            >
-              <svg
-                className="w-5 h-5"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-                aria-hidden="true"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
-                  clipRule="evenodd"
-                ></path>
-              </svg>
-              <span className="sr-only"></span>
-            </a>
             <a
               href="https://twitter.com/marsereum"
               className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
