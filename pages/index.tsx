@@ -79,7 +79,15 @@ const Home: NextPage = () => {
     1: ["https://mainnet.infura.io/v3/fc5d70bd4f49467289b3babe3d8edd97"],
     3: ["https://ropsten.infura.io/v3/<YOUR_INFURA_PROJECT_ID>"],
   };
-
+  const MY_TOKEN_LIST = [
+    {
+      name: "Marsereum",
+      address: "0x4d4206dab4533213109df79d218ed9b63c50f9bb",
+      symbol: "MTH",
+      decimals: 18,
+      chainId: 1,
+    },
+  ];
   return (
     <>
       <main className={styles.main}>
@@ -206,7 +214,7 @@ const Home: NextPage = () => {
                           width={"100%"}
                           jsonRpcUrlMap={jsonRpcUrlMap}
                           provider={uniswaprovider}
-                          defaultOutputTokenAddress={Runeaddress}
+                          tokenList={MY_TOKEN_LIST}
                         />
                       </div>
  
@@ -226,7 +234,7 @@ const Home: NextPage = () => {
                 </>
               ) : (
                 <>
-                  <div className={"flex flex col justify-center"}>
+                  <div className={"flex flex-col justify-center"}>
                     <div
                       style={{
                         background:
