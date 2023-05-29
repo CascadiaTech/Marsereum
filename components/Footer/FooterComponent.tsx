@@ -63,7 +63,7 @@ export default function FooterComponent() {
               </h2>
               <ul className="text-gray-600 dark:text-gray-400">
                 <li className="mb-4">
-                  <a href="/" className="hover:underline">
+                  <a href="https://www.marsereum.org/" className="hover:underline">
                     Marsereum
                   </a>
                 </li>
@@ -84,7 +84,7 @@ export default function FooterComponent() {
               <ul className="text-gray-600 dark:text-gray-400">
                 <li className="mb-2">
                   <a
-                    href=""
+                    href="https://t.me/Marsereum"
                     className="hover:underline "
                   >
                     Telegram

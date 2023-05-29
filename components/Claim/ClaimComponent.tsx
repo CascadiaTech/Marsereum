@@ -448,7 +448,7 @@ export default function ClaimComponent() {
             </p>
           </div>
           <div className={"rounded-xl text-black text-xl px-4 py-2 m-3"}>
-            <p className={"text-xl text-gray-300"}>{totalburned} MARS</p>
+            <p className={"text-xl text-gray-300"}>{totalburned} MTH</p>
           </div>
         </div>
         
