@@ -20,6 +20,7 @@ import {
   Web3Provider,
 } from "@ethersproject/providers";
 import ClaimComponent from "../components/Claim/ClaimComponent";
+import { ConnectWallet } from "../components/Web3Modal/WalletConnect";
 const Home: NextPage = () => {
   const { account, chainId, active } = useWeb3React();
   const showConnectAWallet = Boolean(!account);
@@ -28,42 +29,49 @@ const Home: NextPage = () => {
   const [uniswaprovider, setuniswapprivder] = useState();
   const Runeaddress = "0xc68a4c68f17fed266a5e39e7140650acadfe78f8";
 
+  const tokenAddress = "0x4d4206dab4533213109df79d218ed9b63c50f9bb";
+  const tokenSymbol = "HelloCoin";
+  const tokenDecimals = 18;
+  const tokenImage = "https://assets.codepen.io/4625073/1.jpeg";
+
+  const { connector } = useWeb3React();
+
+  //      image: 'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x6B175474E89094C44Da98b954EedeAC495271d0F/logo.png',
+  const addTokenToMM = async () => {
+    try {
+      const { ethereum }: any = window;
+      await ethereum.request({
+        method: "wallet_watchAsset",
+        params: {
+          type: "ERC20",
+          options: {
+            address: tokenAddress, // ERC20 token address
+            symbol: `MTH`,
+            decimals: 18,
+          },
+        },
+      });
+    } catch (ex) {
+      // We don't handle that error for now
+      // Might be a different wallet than Metmask
+      // or user declined
+      console.error(ex);
+    }
+  };
+
   useEffect(() => {
     async function setProvider() {
       if (account) {
         const provider = new Web3Provider(
           library?.provider as ExternalProvider | JsonRpcFetchFunc
         );
+
         return provider;
       } else {
         return;
       }
     }
 
-    async function ScrollpositionAnimation() {
-      const targets = document.querySelectorAll(".js-show-on-scroll");
-      const observer = new IntersectionObserver(function (entries) {
-        entries.forEach((entry) => {
-          // Is the element in the viewport?
-          if (entry.isIntersecting) {
-            // Add the fadeIn class:
-            entry.target.classList.add("motion-safe:animate-fadeIn");
-          } else {
-            // Otherwise remove the fadein class
-            entry.target.classList.remove("motion-safe:animate-fadeIn");
-          }
-        });
-      });
-      // Loop through each of the target
-      targets.forEach(function (target) {
-        // Hide the element
-        target.classList.add("opacity-0");
-
-        // Add the element to the watcher
-        observer.observe(target);
-      });
-      ScrollpositionAnimation();
-    }
     setProvider().then((result) => setuniswapprivder(result as any));
   }, [account]);
 
@@ -71,7 +79,15 @@ const Home: NextPage = () => {
     1: ["https://mainnet.infura.io/v3/fc5d70bd4f49467289b3babe3d8edd97"],
     3: ["https://ropsten.infura.io/v3/<YOUR_INFURA_PROJECT_ID>"],
   };
-
+  const MY_TOKEN_LIST = [
+    {
+      name: "Marsereum",
+      address: "0x4d4206dab4533213109df79d218ed9b63c50f9bb",
+      symbol: "MTH",
+      decimals: 18,
+      chainId: 1,
+    },
+  ];
   return (
     <>
       <main className={styles.main}>
@@ -198,22 +214,34 @@ const Home: NextPage = () => {
                           width={"100%"}
                           jsonRpcUrlMap={jsonRpcUrlMap}
                           provider={uniswaprovider}
-                          defaultOutputTokenAddress={Runeaddress}
+                          tokenList={MY_TOKEN_LIST}
                         />
                       </div>
+ 
                     </div>
+                    {account ? (
+                        <button
+                          type="button"
+                          onClick={addTokenToMM}
+                          className="text-white bg-gradient-to-r from-red-800 to-red-900 hover:from-red-500 hover:to-red-700 focus:ring-4 focus:ring-blue-300 font-medium mt-2 rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+                        >
+                          Add MTH To Metamask
+                        </button>
+                      ) : (
+                        <ConnectWallet />
+                      )}
                   </div>
                 </>
               ) : (
                 <>
-                  <div className={"flex flex col justify-center"}>
+                  <div className={"flex flex-col justify-center"}>
                     <div
                       style={{
                         background:
                           "linear-gradient(135deg, #3F1B1B 0%, #3F1B1B 50%, #100909 100%)",
                       }}
                       className={
-                        "rounded-xl justify-center text-center w-1/2 h-fit py-10 px-6 mx-10 sm:px-10 md:px-10"
+                        "rounded-xl justify-center items-center text-center w-1/2 h-fit py-10 px-6 mx-10 sm:px-10 md:px-10"
                       }
                     >
                       <p
@@ -225,6 +253,17 @@ const Home: NextPage = () => {
                       >
                         Please connect wallet to purchase
                       </p>
+                      {account ? (
+                        <button
+                          type="button"
+                          onClick={addTokenToMM}
+                          className="text-white bg-gradient-to-r from-red-800 to-red-900 hover:from-red-500 hover:to-red-700 focus:ring-4 focus:ring-blue-300 font-medium mt-2 rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+                        >
+                          Add MTH To Metamask
+                        </button>
+                      ) : (
+                        <ConnectWallet />
+                      )}
                     </div>
                   </div>
                 </>
@@ -232,7 +271,9 @@ const Home: NextPage = () => {
             </div>
           </div>
         </div>
+        <div className="flex flex-col items-center justify-center text-center">
         <ClaimComponent></ClaimComponent>
+        </div>
       </main>
       <FooterComponent></FooterComponent>
     </>
