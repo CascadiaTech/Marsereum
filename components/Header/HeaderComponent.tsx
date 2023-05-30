@@ -56,7 +56,7 @@ export default function HeaderComponent() {
                   
                 style={{
                   background:
-                  "linear-gradient(135deg, #3F1B1B 0%, #3F1B1B 50%, #100909 100%)", fontFamily: "Inter-Regular-400",
+                  "linear-gradient(135deg, #3F1B1B 0%, #3F1B1B 50%, #100909 100%)", fontFamily: "Inter-Regular-400", boxShadow: '0px 1px 12px 1px rgba(0,0,0,0.8)'
                 }}
                   className="duration-300 w-40 text-center text-md hover:cursor-pointer text-white hover:from-red-500 hover:to-red-700 focus:ring-4 focus:ring-blue-300 mt-2 rounded-lg px-4 py-3 mr-2 mb-2"
                 >

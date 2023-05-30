@@ -234,18 +234,18 @@ const Home: NextPage = () => {
                 </>
               ) : (
                 <>
-                  <div className={"flex flex-col justify-center"}>
+                  <div className={"flex flec-col mx-auto justify-center"}>
                     <div
                       style={{
                         background:
                           "linear-gradient(135deg, #3F1B1B 0%, #3F1B1B 50%, #100909 100%)",
                       }}
                       className={
-                        "rounded-xl justify-center items-center text-center w-1/2 h-fit py-10 px-6 mx-10 sm:px-10 md:px-10"
+                        "flex flex-row mx-auto rounded-xl justify-center items-center text-center w-1/2 h-fit py-10 px-6 mx-10 sm:px-10 md:px-10"
                       }
                     >
                       <p
-                        className="text-center text-2xl sm:text-2xl md:text-3xl"
+                        className="text-center text-2xl sm:text-2xl"
                         style={{
                           fontFamily: "Inter-Regular-400",
                           color: "#616d7e",
